@@ -1,0 +1,53 @@
+[package]
+name = "rs-tables2pgcopy2zip"
+version = "0.1.0"
+edition = "2024"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[dependencies.tokio-postgres]
+version = "0.7.13"
+default-features = false
+features = [
+	"runtime",
+]
+
+[dependencies.futures-util]
+version = "0.3.31"
+default-features = false
+features = [
+	"std",
+]
+
+[dependencies.zip]
+version = "2.6.1"
+default-features = false
+features = [
+	"deflate",
+]
+
+[dependencies.bytes]
+version = "1.10.1"
+default-features = false
+features = [
+	"std",
+]
+
+[dependencies.tokio]
+version = "1.45.0"
+default-features = false
+features = [
+	"rt-multi-thread",
+	"macros",
+]
+
+[dependencies.deadpool-postgres]
+version = "0.14.1"
+default-features = false
+features = [
+	"rt_tokio_1",
+]
